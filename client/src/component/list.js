@@ -53,7 +53,7 @@ function List() {
 
                 <h1>Employe data</h1>
                 <br></br>
-                <table class="table table-responsive table-bordered  w-auto bg-white shadow">
+                <table classNam="table table-responsive table-bordered  w-auto bg-white shadow">
                     <thead>
                         <tr>
                             <th scope="col">S.no</th>

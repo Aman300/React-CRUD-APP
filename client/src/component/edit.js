@@ -70,12 +70,12 @@ function Edit() {
         <>
             <br></br>
             <h1 className='text-center'>Updata Employer detail</h1>
-            <div class="container p-2">
-                <div class="card border-0 shadow">
+            <div className="container p-2">
+                <div className="card border-0 shadow">
                     <div class="card-body">
                         <form onSubmit={(e) => submit(e)}>
-                            <div class="form-row">
-                                <div class="form-group col-md-6">
+                            <div className="form-row">
+                                <div className="form-group col-md-6">
                                     <label for="inputEmail4">First name</label>
                                     <input onChange={(e) => handle(e)} id='fname' value={data.fname} type="text" class="form-control" name='fname' placeholder="first name" required></input>
                                 </div>
@@ -141,10 +141,10 @@ function Edit() {
                                 </div>
                                 <div class="form-group col-md-2">
                                     <label for="inputZip">Zip</label>
-                                    <input onChange={(e) => handle(e)} id='zip' value={data.zip} type="number" class="form-control" name='zip' required></input>
+                                    <input onChange={(e) => handle(e)} id='zip' value={data.zip} type="number" className="form-control" name='zip' required></input>
                                 </div>
                             </div>
-                            <button type="submit" class="btn btn-danger">Update</button>
+                            <button type="submit" className="btn btn-danger">Update</button>
                         </form>
                     </div>
                 </div>
