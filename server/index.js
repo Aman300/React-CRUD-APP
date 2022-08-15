@@ -24,6 +24,8 @@ mongoose.connect("mongodb+srv://saurabh042160:iafSq7ML1zCfugKI@cluster1.ymdh1.mo
     console.log('db not connect please check connection')
 })
 
+app.use('/', route)
+
 // Have Node serve the files for our built React app
 app.use(express.static(path.resolve(__dirname, '../client/build')));
 
@@ -31,8 +33,6 @@ app.use(express.static(path.resolve(__dirname, '../client/build')));
 app.get('*', (req, res) => {
     res.sendFile(path.resolve(__dirname, '../client/build', 'index.html'));
   });
-
-app.use('/', route)
 
 
 app.listen(process.env.Port || 4000, ()=>{
