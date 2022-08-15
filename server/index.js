@@ -24,10 +24,12 @@ mongoose.connect("mongodb+srv://saurabh042160:iafSq7ML1zCfugKI@cluster1.ymdh1.mo
     console.log('db not connect please check connection')
 })
 
-app.use('/', route)
+
 
 // Have Node serve the files for our built React app
 app.use(express.static(path.resolve(__dirname, '../client/build')));
+
+app.use('/', route)
 
 // All other GET requests not handled before will return our React app
 app.get('*', (req, res) => {
