@@ -50,7 +50,7 @@ function Home() {
 
         <>
             <br></br>
-            <h1 classNameName='text-center'>Fill the form</h1>
+            <h1 className='text-center'>Fill the form</h1>
             <div className="container p-2">
                 <div className="card border-0 shadow">
                     <div className="card-body">
