@@ -37,7 +37,7 @@ function Home() {
             .then(res => {
                 window.alert("data post successfull")
             })
-            .then(res => {<Link className="nav-item nav-link text-white" to="/list">List</Link>})
+            .then(<Link to="/list"></Link>)
     }
 
 
