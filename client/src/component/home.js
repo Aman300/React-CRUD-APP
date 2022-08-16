@@ -62,7 +62,7 @@ function Home() {
                         <h2>Development</h2>
                         <p>Web programming, also known as web development, is the creation of dynamic web applications. Examples of web applications are social networking sites like Facebook or e-commerce sites like Amazon. The good news is that learning web development is not that hard!</p>
                         <div className='bnt'>
-                        <button type="submit" className="btn text-white">Know More</button>
+                           <button type="submit" className="btn text-white">Know More</button>
                         </div>
                        </div>
                     </div>
