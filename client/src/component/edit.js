@@ -38,7 +38,6 @@ function Edit() {
                 window.alert("data update successfull")
             })
             .then(res => { window.location.href = "/list" })
-            
     }
 
 
