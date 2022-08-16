@@ -69,7 +69,9 @@ function Edit() {
 
         <>
             <br></br>
-            <h1 className='text-center'>Updata Employer detail</h1>
+            <br></br>
+            <br></br>
+            <h2 className='text-center'>Updata Employer detail</h2>
             <div className="container p-2">
                 <div className="card border-0 shadow">
                     <div class="card-body">

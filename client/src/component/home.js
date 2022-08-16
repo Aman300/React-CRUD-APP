@@ -2,6 +2,8 @@ import React from 'react'
 import { useState } from 'react';
 import Axios from 'axios';
 
+import pic from './img/wallpaper.jpg';
+
 
 function Home() {
 
@@ -50,7 +52,27 @@ function Home() {
 
         <>
             <br></br>
-            <h1 className='text-center'>Fill the form</h1>
+            <br></br>
+            <br></br>
+            <div className="container-fluid bg-white">
+                <div className='row'>
+                    <div className='col-xl-6 col-12'>
+                       <div className='container padding'>
+                       <h1>APS</h1>
+                        <h2>Development</h2>
+                        <p>Web programming, also known as web development, is the creation of dynamic web applications. Examples of web applications are social networking sites like Facebook or e-commerce sites like Amazon. The good news is that learning web development is not that hard!</p>
+                        <button type="submit" className="btn text-white bnt">Know More</button>
+                       </div>
+                    </div>
+                    <div className='col-xl-6 col-12'>
+                        <img className='w-100' src={pic} alt='img'></img>
+                    </div>
+                </div>
+            </div>
+
+
+            <br></br>
+            <h2 className='text-center'>New Employe form</h2>
             <div className="container p-2">
                 <div className="card border-0 shadow">
                     <div className="card-body">
@@ -125,7 +147,7 @@ function Home() {
                                     <input onChange={(e) => handle(e)} id='zip' value={data.zip} type="number" className="form-control" name='zip' required></input>
                                 </div>
                             </div>
-                            <button type="submit" className="btn btn-danger">submit</button>
+                            <button type="submit" className="btn text-white">submit</button>
                         </form>
                     </div>
                 </div>

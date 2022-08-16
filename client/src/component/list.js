@@ -48,10 +48,13 @@ function List() {
     return (
 
         <>
+        <br></br>
+        <br></br>
+        <br></br>
             <div className='container text-center'>
             <br></br>
 
-                <h1>Employe data</h1>
+                <h2>Employe data record</h2>
                 <br></br>
                 <table className="table table-responsive table-bordered  w-auto bg-white shadow">
                     <thead>
