@@ -11,7 +11,7 @@ function List() {
 
     useEffect(() => {
         async function getUsers() {
-            const response = await fetch('http://localhost:4000/showDbData', {
+            const response = await fetch('/showDbData', {
                 method: 'GET',
                 headers: {
                     accept: 'application/json',
@@ -33,7 +33,7 @@ function List() {
 
  function onDelete(id){
     //alert(item)
-    fetch('http://localhost:4000/postDelete/'+id,{
+    fetch('/postDelete/'+id,{
       method: 'delete',
         headers: {
           accept: 'application/json',
@@ -53,7 +53,7 @@ function List() {
 
                 <h1>Employe data</h1>
                 <br></br>
-                <table classNam="table table-responsive table-bordered  w-auto bg-white shadow">
+                <table className="table table-responsive table-bordered  w-auto bg-white shadow">
                     <thead>
                         <tr>
                             <th scope="col">S.no</th>

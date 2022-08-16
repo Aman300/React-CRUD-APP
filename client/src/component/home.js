@@ -7,7 +7,7 @@ function Home() {
 
 
 
-    const url = 'http://localhost:4000/postData'
+    const url = '/postData'
     const [data, setData] = useState({
         fname: "",
         lname: "",

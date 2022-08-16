@@ -11,7 +11,7 @@ function Edit() {
     const params = useParams();
 
 
-    const url = `http://localhost:4000/postEdit/${params.id}`
+    const url = `/postEdit/${params.id}`
     const [data, setData] = useState({
         fname: "",
         lname: "",
@@ -57,7 +57,7 @@ function Edit() {
     }, []);
 
     const getEmploerData = async () => {
-        let result = await fetch(`http://localhost:4000/edit/${params.id}`);
+        let result = await fetch(`/edit/${params.id}`);
         result = await result.json();
         console.log(result)
         setData(result)
