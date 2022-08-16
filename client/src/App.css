@@ -89,7 +89,7 @@ footer{
         font-size: 13px;
     }
 
-    h1, h2, p, button{
+    h1, h2, p, .bnt{
         padding: 0;
         margin-top: 10px;
     }

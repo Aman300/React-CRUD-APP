@@ -146,7 +146,7 @@ function Edit() {
                                     <input onChange={(e) => handle(e)} id='zip' value={data.zip} type="number" className="form-control" name='zip' required></input>
                                 </div>
                             </div>
-                            <button type="submit" className="btn btn-danger">Update</button>
+                            <button type="submit" className="btn text-center">Update</button>
                         </form>
                     </div>
                 </div>
