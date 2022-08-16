@@ -4,7 +4,7 @@ import Axios from 'axios';
 
 import pic from './img/wallpaper.jpg';
 
-import { Link } from "react-router-dom";
+
 
 
 function Home() {
@@ -37,7 +37,7 @@ function Home() {
             .then(res => {
                 window.alert("data post successfull")
             })
-            .then(<Link to="/list"></Link>)
+            .then(res => { window.location.href = "/list" })
     }
 
 
