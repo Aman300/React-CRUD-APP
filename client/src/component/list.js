@@ -10,6 +10,10 @@ function List() {
     const [users, setUsers] = useState([]);
 
     useEffect(() => {
+        getData()
+    }, []);
+
+    function getData(){
         async function getUsers() {
             const response = await fetch('/showDbData', {
                 method: 'GET',
@@ -24,7 +28,7 @@ function List() {
         }
 
         getUsers();
-    }, []);
+    }
 
     console.log(users);
     //---------------------------------
@@ -41,7 +45,7 @@ function List() {
     }).then((res) =>{
       res.json().then((resp) =>{
         alert('Document is deleted successfull')
-      }).then(res => { window.location.href = "/list" })
+      }).then(res => getData())
     })
   }
 
