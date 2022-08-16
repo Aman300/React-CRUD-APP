@@ -81,8 +81,8 @@ function List() {
                                     <td>{item.state}</td>
                                     <td>{item.zip}</td>
 
-                                    <td><Link className='btn btn-warning' to={'/edit/'+(item._id)} >edit</Link></td>
-                                    <td><button className='btn btn-danger' onClick={() => onDelete(item._id)} >delete</button></td>
+                                    <td><Link className='btn text-white' to={'/edit/'+(item._id)} >edit</Link></td>
+                                    <td><button className='btn text-white' onClick={() => onDelete(item._id)} >delete</button></td>
                                 </tr>
                             </tbody>
                         ))
