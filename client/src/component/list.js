@@ -20,13 +20,17 @@ function List() {
 
       //-----------------------------------
 
-async function onDelete(id){
-    let data = await fetch('/postDelete/'+id)    
-    if(data){
+ function onDelete(id){
+    fetch('/postDelete/'+id,{
+      method: 'delete',
+        headers: {
+          accept: 'application/json',
+        },
+    }).then((res) =>{
+      res.json().then((resp) =>{
         alert('Document is deleted successfull')
-        getData();
-    }       
-
+      }).then(res => getData())
+    })
   }
 
     return (
