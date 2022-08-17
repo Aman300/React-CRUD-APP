@@ -3,13 +3,14 @@ import { useState } from 'react';
 import Axios from 'axios';
 
 import pic from './img/wallpaper.jpg';
+import { useNavigate  } from "react-router-dom"; 
 
 
 
 
 function Home() {
 
-
+    const navigate  = useNavigate() 
 
     const url = '/postData'
     const [data, setData] = useState({
@@ -35,9 +36,11 @@ function Home() {
 
         })
             .then(res => {
-                window.alert("data post successfull")
+                window.alert("form sumbit successfull")
             })
-            .then(res => { window.location.href = "/list" })
+            .then(res => {
+                navigate('/list');
+            })
     }
 
 
@@ -58,7 +61,7 @@ function Home() {
             <br></br>
             <div className="container-fluid bg-white">
                 <div className='row'>
-                    <div className='col-xl-6 col-12'>
+                    <div className='col-md-6 col-12'>
                        <div className='container padding'>
                        <h1>APS</h1>
                         <h2>Development</h2>
@@ -68,7 +71,7 @@ function Home() {
                         </div>
                        </div>
                     </div>
-                    <div className='col-xl-6 col-12'>
+                    <div className='col-md-6  col-12'>
                         <img className='w-100' src={pic} alt='img'></img>
                     </div>
                 </div>

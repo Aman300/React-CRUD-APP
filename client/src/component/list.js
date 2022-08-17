@@ -1,6 +1,5 @@
 import React from 'react'
 import { useState, useEffect } from 'react';
-//import Axios from 'axios';
 
 import {Link} from "react-router-dom";
 
@@ -13,25 +12,11 @@ function List() {
         getData()
     }, []);
 
-    function getData(){
-        async function getUsers() {
-            const response = await fetch('/showDbData', {
-                method: 'GET',
-                headers: {
-                    accept: 'application/json',
-                },
-            });
-
-            const data = await response.json()
-
-            setUsers(data);
-        }
-
-        getUsers();
+    async function getData(){
+        const response  = await fetch('/showDbData')
+        const data = await response.json()
+        setUsers(data)
     }
-
-    console.log(users);
-    //---------------------------------
 
       //-----------------------------------
 

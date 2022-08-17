@@ -2,16 +2,18 @@ import React from 'react'
 import { useState, useEffect } from 'react';
 import Axios from 'axios';
 
-import { useParams } from "react-router-dom";
+import { useParams, useNavigate } from "react-router-dom";
 
 
 
 function Edit() {
 
     const params = useParams();
+    const navigate  = useNavigate() 
 
 
     const url = `/postEdit/${params.id}`
+
     const [data, setData] = useState({
         fname: "",
         lname: "",
@@ -37,7 +39,9 @@ function Edit() {
             .then(res => {
                 window.alert("data update successfull")
             })
-            .then(res => { window.location.href = "/list" })
+            .then(() =>{
+                navigate('/list');
+            })
     }
 
 
@@ -54,9 +58,9 @@ function Edit() {
 
     useEffect(() => {
         getEmploerData();
-    }, []);
+    },[]);
 
-    const getEmploerData = async () => {
+    async function getEmploerData(){
         let result = await fetch(`/edit/${params.id}`);
         result = await result.json();
         console.log(result)
