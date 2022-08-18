@@ -5,5 +5,5 @@ body{
   margin: 0%;
   padding: 0%;
   box-sizing: border-box;
-  background-color: rgb(189, 189, 189);
+  background: linear-gradient(90deg, #FDBB2D 0%, #22C1C3 100%);
 }

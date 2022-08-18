@@ -4,6 +4,15 @@
 
 
 @media (min-width: 1440px){
+
+    .background-color{
+        background: linear-gradient(90deg, #FDBB2D 0%, #22C1C3 100%);
+    }
+
+    .text-size{
+        font-size: 30px;
+        font-weight: bold;
+    }
     .padding{
         padding: 40px;        
         margin-left: 50px;
@@ -21,10 +30,11 @@
         font-size: 23px;
     }
 
-    h1, h2, p, .bnt{
+    h4,h5,h1, h2, p, .bnt{
         padding: 0;
         margin-top: 20px;
     }
+    
     .btn{
         padding: 10px 40px;
         font-size: 20px;
@@ -42,6 +52,14 @@
             border-bottom: 6px solid rgba(0, 174, 239, .15);
             border-top: 6px solid rgba(0, 174, 239, .8);
             border-radius: 100%;
+          }
+
+          .w-50{
+           display: flex;
+           align-items: center;
+           justify-content: center;
+           width: 5px;
+
           }
 
           .card {
@@ -84,10 +102,20 @@
             left:0;
             bottom:0;
             right:0;
+            background: linear-gradient(90deg, #FDBB2D 0%, #3A1C71 100%);
         }
 }
 
 @media screen and (max-device-width: 481px) and (max-device-width: 768px) { 
+
+    .background-color{
+        background: linear-gradient(90deg, #FDBB2D 0%, #22C1C3 100%);
+    }
+
+    .text-size{
+        font-size: 15px;
+        font-weight: bold;
+    }
 
     .spinner-border{
         height: 60px;
@@ -167,5 +195,6 @@
         left:0;
         bottom:0;
         right:0;
+        background: linear-gradient(90deg, #FDBB2D 0%, #3A1C71 100%);
     }
 }

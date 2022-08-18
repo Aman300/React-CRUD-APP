@@ -1,19 +1,16 @@
 import React from 'react'
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 import Axios from 'axios';
-
-import { useParams, useNavigate } from "react-router-dom";
-
+import { useNavigate } from "react-router-dom";
 
 
-function Edit() {
-
-    const params = useParams();
-    const navigate  = useNavigate() 
 
 
-    const url = `/postEdit/${params.id}`
+function Form() {
 
+    const navigate = useNavigate()
+
+    const url = '/postData'
     const [data, setData] = useState({
         fname: "",
         lname: "",
@@ -26,7 +23,7 @@ function Edit() {
 
     function submit(e) {
         e.preventDefault();
-        Axios.put(url, {
+        Axios.post(url, {
             fname: data.fname,
             lname: data.lname,
             address: data.address,
@@ -37,9 +34,9 @@ function Edit() {
 
         })
             .then(res => {
-                window.alert("data update successfull")
+                window.alert("form sumbit successfull")
             })
-            .then(() =>{
+            .then(res => {
                 navigate('/list');
             })
     }
@@ -54,60 +51,45 @@ function Edit() {
 
 
 
-
-
-    useEffect(() => {
-        getEmploerData();
-    },[]);
-
-    async function getEmploerData(){
-        let result = await fetch(`/edit/${params.id}`);
-        result = await result.json();
-        console.log(result)
-        setData(result)
-    }
-
-
-
     return (
 
         <>
+
+
+
+
             <br></br>
-            <br></br>
-            <br></br>
-            <br></br>
-            <br></br>
-            <h2 className='text-center'>Updata Employer detail</h2>
+            <h2 className='text-center'>New Employe form</h2>
             <div className="container p-2">
                 <div className="card border-0 shadow">
-                    <div class="card-body">
+                    <div className="card-body">
                         <form onSubmit={(e) => submit(e)}>
                             <div className="form-row">
                                 <div className="form-group col-md-6">
                                     <label for="inputEmail4">First name</label>
-                                    <input onChange={(e) => handle(e)} id='fname' value={data.fname} type="text" class="form-control" name='fname' placeholder="first name" required></input>
+                                    <input onChange={(e) => handle(e)} id='fname' value={data.fname} type="text" className="form-control" name='fname' placeholder="first name" required></input>
                                 </div>
-                                <div class="form-group col-md-6">
+                                <div className="form-group col-md-6">
                                     <label for="inputPassword4">last name</label>
-                                    <input onChange={(e) => handle(e)} id='lname' value={data.lname} type="text" class="form-control" name='lname' placeholder="last name" required></input>
+                                    <input onChange={(e) => handle(e)} id='lname' value={data.lname} type="text" className="form-control" name='lname' placeholder="last name" required></input>
                                 </div>
                             </div>
-                            <div class="form-group">
+                            <div className="form-group">
                                 <label for="inputAddress">Address</label>
-                                <input onChange={(e) => handle(e)} id='address' value={data.address} type="text" class="form-control" name='address' placeholder="1234 Main St" required></input>
+                                <input onChange={(e) => handle(e)} id='address' value={data.address} type="text" className="form-control" name='address' placeholder="1234 Main St" required></input>
                             </div>
-                            <div class="form-group">
+                            <div className="form-group">
                                 <label for="inputAddress">E-mail</label>
-                                <input onChange={(e) => handle(e)} id='email' value={data.email} type="email" class="form-control" name='email' placeholder="E-mail id" required></input>
+                                <input onChange={(e) => handle(e)} id='email' value={data.email} type="email" className="form-control" name='email' placeholder="E-mail id" required></input>
                             </div>
-                            <div class="form-row">
-                                <div class="form-group col-md-6">
+                            <div className="form-row">
+                                <div className="form-group col-md-6">
                                     <label for="inputCity">City</label>
-                                    <input onChange={(e) => handle(e)} id='city' value={data.city} type="text" class="form-control" name='city' required></input>
+                                    <input onChange={(e) => handle(e)} id='city' value={data.city} type="text" className="form-control" name='city' required></input>
                                 </div>
-                                <div class="form-group col-md-4">
+                                <div className="form-group col-md-4">
                                     <label for="inputState">State</label>
-                                    <select onChange={(e) => handle(e)} id='state' value={data.state} name='state' class="form-control" required>
+                                    <select onChange={(e) => handle(e)} id='state' value={data.state} name='state' className="form-control" required>
                                         <option selected>Choose...</option>
                                         <option value="Andhra Pradesh">Andhra Pradesh</option>
                                         <option value="Andaman and Nicobar Islands">Andaman and Nicobar Islands</option>
@@ -147,29 +129,21 @@ function Edit() {
                                         <option value="West Bengal">West Bengal</option>
                                     </select>
                                 </div>
-                                <div class="form-group col-md-2">
+                                <div className="form-group col-md-2">
                                     <label for="inputZip">Zip</label>
                                     <input onChange={(e) => handle(e)} id='zip' value={data.zip} type="number" className="form-control" name='zip' required></input>
                                 </div>
                             </div>
-                            <button type="submit" className="btn text-white">Update</button>
+                            <button type="submit" className="btn text-white">submit</button>
                         </form>
                     </div>
                 </div>
             </div>
             <br></br>
-            <br></br>
-            <br></br>
-            <br></br>
-            <br></br>
-            <br></br>
-            
 
         </>
 
     )
 }
 
-export default Edit;
-
-
+export default Form;
