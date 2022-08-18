@@ -21,7 +21,7 @@ function List() {
             const data = await response.json()
             setUsers(data)
             setLoader(false)
-        }, 500);
+        }, 50);
     }
 
     //-----------------------------------
